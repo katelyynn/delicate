@@ -1,0 +1,3 @@
+tippy.setDefaultProps({
+    arrow: false
+});

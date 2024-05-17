@@ -21,3 +21,44 @@ body {
 .chartlist-row:nth-child(odd):not([nowplaying="true"]) {
     --bg: hsla(var(--b4), 40%) !important;
 }
+
+
+.badges {
+    justify-content: center;
+    gap: var(--card-gap);
+}
+.badge {
+    color: hsl(var(--l3-c));
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    font-weight: 500;
+}
+
+.badge--pro {
+    --hue: 174;
+    --sat: 1;
+    --lit: 1;
+}
+.badge--staff {
+    --hue: -2;
+    --sat: 1;
+    --lit: 1;
+}
+
+
+/* tooltips */
+.tippy-box {
+    background: hsl(var(--b5));
+    border: 1px solid hsl(var(--b4));
+    border-radius: var(--item-med-radius);
+    box-shadow: var(--menu-shadow);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: hsl(var(--c2));
+}
+.tippy-content {
+    padding: 5px 7px;
+}
