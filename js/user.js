@@ -79,7 +79,7 @@ function request_recent_listening(user) {
 function create_badge(badge) {
     let em_badge = document.createElement('div');
     em_badge.classList.add('badge',`badge--${badge}`);
-    em_badge.innerHTML = `<i class="icon w-20" data-lucide="${badges[badge].icon}"></i><span class="text">${badges[badge].name}</span>`;
+    em_badge.innerHTML = `<i class="icon w-16" data-lucide="${badges[badge].icon}"></i><span class="text">${badges[badge].name}</span>`;
 
     tippy(em_badge, {
         content: badges[badge].bio

@@ -32,8 +32,6 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: var(--font-size);
-    line-height: var(--line-height);
     font-weight: 500;
 }
 
