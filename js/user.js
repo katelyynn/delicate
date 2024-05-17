@@ -45,8 +45,12 @@ function load_user(data) {
     document.getElementById('avatar').src = data.covers.extra_large;
 
     document.getElementById('name').textContent = data.user;
-    document.getElementById('registered').textContent = moment.unix(data.registered).fromNow();;
+    document.getElementById('registered').textContent = moment.unix(data.registered).fromNow();
     document.getElementById('aka').textContent = data.real_name;
+
+    tippy(document.getElementById('registered'), {
+        content: moment.unix(data.registered).format('MMMM Do YYYY hh:mm:ss')
+    });
 
     document.title = `${data.user}'s profile — cutensilly.org`;
 

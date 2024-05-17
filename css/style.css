@@ -53,8 +53,8 @@ body {
     border: 1px solid hsl(var(--b4));
     border-radius: var(--item-med-radius);
     box-shadow: var(--menu-shadow);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
     color: hsl(var(--c2));
 }
 .tippy-content {
