@@ -16,7 +16,7 @@ function load_grid(data, type = 'artist', element) {
         } else {
             info.innerHTML = (`
             <a class="title">${this_item.name}</a>
-            <a class="plays">${this_item.artist} plays</a>
+            <a class="plays">${this_item.artist}</a>
             <a class="plays">${this_item.plays} plays</a>
             `);
         }

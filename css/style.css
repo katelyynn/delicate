@@ -101,7 +101,7 @@ body {
     align-items: end;
 }
 .grid-item :is(.artist, .plays) {
-    color: hsl(var(--c2));
+    color: hsla(var(--c1), 80%);
     display: flex;
 }
 
