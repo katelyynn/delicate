@@ -82,7 +82,10 @@ function request_recent_listening(user) {
     xhr.open('GET',url,true);
 
     xhr.onload = function() {
-        load_chartlist(JSON.parse(this.response), document.getElementById('recent-listening'));
+        let data = JSON.parse(this.response);
+
+        load_chartlist(data, document.getElementById('recent-listening'));
+        document.getElementById('bg').style.setProperty('background-image',`url(${data[0].covers.extra_large})`);
         request_weekly_artists(user);
     }
 
