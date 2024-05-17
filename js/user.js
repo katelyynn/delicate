@@ -23,6 +23,8 @@ function load_user(data) {
     document.getElementById('registered').textContent = moment.unix(data.registered).fromNow();;
     document.getElementById('aka').textContent = data.real_name;
 
+    document.title = `${data.user}'s profile — cutensilly.org`;
+
     request_recent_listening(user);
 }
 
