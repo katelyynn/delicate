@@ -1,0 +1,23 @@
+body {
+    padding-top: 70px;
+}
+
+
+.caption.col {
+    flex-direction: column;
+}
+
+.caption.col span {
+    display: flex;
+    gap: 6px;
+}
+
+
+.chartlist-row:not([nowplaying="true"]) {
+    --bg: transparent !important;
+    --bg-hov: hsla(var(--b4), 80%) !important;
+    --shadow: none !important;
+}
+.chartlist-row:nth-child(odd):not([nowplaying="true"]) {
+    --bg: hsla(var(--b4), 40%) !important;
+}
