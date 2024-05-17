@@ -43,8 +43,26 @@
 
                 </div>
             </section>
+            <section class="panel flex flex-column flex-gap" style="z-index: 10">
+                <h5>Weekly artists</h5>
+                <div class="grid" id="weekly-artists">
+
+                </div>
+            </section>
+            <section class="panel flex flex-column flex-gap" style="z-index: 10">
+                <h5>Weekly albums</h5>
+                <div class="grid" id="weekly-albums">
+
+                </div>
+            </section>
+            <section class="panel flex flex-column flex-gap" style="z-index: 10">
+                <h5>Weekly tracks</h5>
+                <div class="chartlist" id="weekly-tracks">
+
+                </div>
+            </section>
         </div>
-        <div class="sidebar">
+        <div class="sidebar" style="height: fit-content">
             <section class="panel flex flex-column flex-gap" style="z-index: 10">
                 <div class="avatar-wrap">
                     <img class="avatar circular shadow" id="avatar" alt="avatar" style="--size: 110px">
@@ -75,6 +93,7 @@
 <script src="/js/moment.js"></script>
 <script src="/js/user.js"></script>
 <script src="/js/chartlist.js"></script>
+<script src="/js/grid.js"></script>
 <style>
     :root {
 		--card-background: hsla(var(--b5), 80%);

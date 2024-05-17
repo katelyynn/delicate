@@ -83,6 +83,45 @@ function request_recent_listening(user) {
 
     xhr.onload = function() {
         load_chartlist(JSON.parse(this.response), document.getElementById('recent-listening'));
+        request_weekly_artists(user);
+    }
+
+    xhr.send();
+}
+
+function request_weekly_artists(user) {
+    let xhr = new XMLHttpRequest();
+    let url = 'https://api.cutensilly.org/fm/user/' + user + '/artists';
+    xhr.open('GET',url,true);
+
+    xhr.onload = function() {
+        load_grid(JSON.parse(this.response), 'artist', document.getElementById('weekly-artists'));
+        request_weekly_albums(user);
+    }
+
+    xhr.send();
+}
+
+function request_weekly_albums(user) {
+    let xhr = new XMLHttpRequest();
+    let url = 'https://api.cutensilly.org/fm/user/' + user + '/albums';
+    xhr.open('GET',url,true);
+
+    xhr.onload = function() {
+        load_grid(JSON.parse(this.response), 'album', document.getElementById('weekly-albums'));
+        request_weekly_tracks(user);
+    }
+
+    xhr.send();
+}
+
+function request_weekly_tracks(user) {
+    let xhr = new XMLHttpRequest();
+    let url = 'https://api.cutensilly.org/fm/user/' + user + '/tracks';
+    xhr.open('GET',url,true);
+
+    xhr.onload = function() {
+        load_chartlist(JSON.parse(this.response), document.getElementById('weekly-tracks'));
     }
 
     xhr.send();

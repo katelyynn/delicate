@@ -1,5 +1,5 @@
 body {
-    padding-top: 70px;
+    padding: 70px 0;
 }
 
 
@@ -64,4 +64,52 @@ body {
 }
 .tippy-content {
     padding: 5px 7px;
+}
+
+
+/* artist grid */
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+    gap: 4px;
+}
+
+.grid-item {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--item-med-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 1px solid hsl(var(--b4));
+    display: flex;
+}
+.grid-item .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: var(--card-gap);
+    gap: 6px;
+    flex: 1;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 150%);
+}
+
+.grid-item .title {
+    color: hsl(var(--c1));
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+.grid-item :is(.artist, .plays) {
+    color: hsl(var(--c2));
+    display: flex;
+}
+
+.grid-item :is(.title, .artist, .plays):not(:hover) {
+    text-decoration: none;
 }
