@@ -25,6 +25,11 @@ let badges = {
         'icon': 'key-round',
         'name': 'Mod',
         'bio': 'Last.fm Moderator'
+    },
+    'kate': {
+        'icon': 'crown',
+        'name': 'kate',
+        'bio': 'https://cutensilly.org'
     }
 }
 
@@ -61,6 +66,9 @@ function load_user(data) {
 
     if (data.type != 'user' && data.type != 'subscriber')
         document.getElementById('badges').appendChild(create_badge(data.type));
+
+    if (data.user == 'cutensilly')
+        document.getElementById('badges').appendChild(create_badge('kate'));
 
     lucide.createIcons();
 

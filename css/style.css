@@ -45,6 +45,11 @@ body {
     --sat: 1;
     --lit: 1;
 }
+.badge--kate {
+    --hue: 20;
+    --sat: 1.2;
+    --lit: 1;
+}
 
 
 /* tooltips */
